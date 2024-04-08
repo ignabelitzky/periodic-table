@@ -22,4 +22,8 @@ const QStringList colors({
     "#FFFFFF"  // White
 });
 
+const QStringList elementsType({"Alkali Metal", "Alkaline-Earth Metal", "Transition Metal", "Halogen", "Other Nonmetal",
+                                "Metalloid", "Post Transition Metal", "Lanthanoid", "Actinoid", "Noble Gas",
+                                "Unknown"});
+
 #endif

@@ -1,6 +1,5 @@
 #include "../include/mainwindow.h"
 #include "../ui/ui_mainwindow.h"
-#include <QObject>
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow)
 {
@@ -21,6 +20,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     set_element_buttons_style();
 
     this->elements = load_elements_from_json_file(":/data/elements.json");
+
     for (int i = 0; i < 128; ++i)
     {
         QString buttonName = QString("pushButton_%1").arg(i + 1);
@@ -28,6 +28,28 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
         if (button)
         {
             connect(button, &QPushButton::clicked, this, [=]() { display_element_information(i); });
+        }
+    }
+
+    // Add reference to the elements.
+    referenceLayout = ui->centralwidget->findChild<QGridLayout *>(QString("referenceGridLayout"));
+    int row = 0, col = 0;
+    for (int i = 0; i < elementsType.size(); ++i)
+    {
+        QLabel *referenceLabel = new QLabel(QString("%1").arg(elementsType[i]));
+        QPushButton *referenceColor = new QPushButton();
+        referenceColor->setFixedSize(20, 20);
+        QString styleSheet = QString("QPushButton {"
+                                     "background-color: %1;"
+                                     "}")
+                                 .arg(colors.at(i));
+        referenceColor->setStyleSheet(styleSheet);
+        referenceLayout->addWidget(referenceColor, row, col++);
+        referenceLayout->addWidget(referenceLabel, row, col++);
+        if (col == 8)
+        {
+            col = 0;
+            ++row;
         }
     }
 }
@@ -85,6 +107,8 @@ void MainWindow::display_element_information(int elementIndex)
         gridLayout->addWidget(propertyLabel, i, 0);
         gridLayout->addWidget(valueLabel, i, 1);
     }
+
+    infoDialog->setLayout(layout);
 
     infoDialog->exec();
 }

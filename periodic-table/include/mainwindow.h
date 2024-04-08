@@ -5,6 +5,7 @@
 #include "../include/utils.h"
 #include <QButtonGroup>
 #include <QDialog>
+#include <QGridLayout>
 #include <QLabel>
 #include <QMainWindow>
 
@@ -27,6 +28,7 @@ class MainWindow : public QMainWindow
     Ui::MainWindow *ui;
     QList<QButtonGroup *> elementButtons;
     QList<Element> elements;
+    QGridLayout *referenceLayout;
     void set_element_buttons_style();
 
   private slots:
