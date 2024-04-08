@@ -1,9 +1,6 @@
-#include "../include/element.h"
 #include "../include/mainwindow.h"
-
-#include <QApplication>
 #include "../include/utils.h"
-#include "../include/element.h"
+#include <QApplication>
 
 int main(int argc, char *argv[])
 {

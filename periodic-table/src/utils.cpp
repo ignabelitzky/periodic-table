@@ -4,7 +4,7 @@ QList<Element> load_elements_from_json_file(const QString jsonFilename)
 {
     QList<Element> result{};
     QFile jsonFile(jsonFilename);
-    if(!jsonFile.open(QIODevice::ReadOnly | QIODevice::Text))
+    if (!jsonFile.open(QIODevice::ReadOnly | QIODevice::Text))
     {
         qDebug() << "Failed to open JSON file";
     }
@@ -29,20 +29,13 @@ QList<Element> load_elements_from_json_file(const QString jsonFilename)
             for (const auto &element : elementsArray)
             {
                 QJsonObject elementObj = element.toObject();
-                Element newElement(elementObj["atomic_number"].toInt(),
-                                   elementObj["symbol"].toString(),
-                                   elementObj["name"].toString(),
-                                   elementObj["atomic_mass"].toDouble(),
-                                   elementObj["category"].toString(),
-                                   elementObj["electronegativity"].toDouble(),
-                                   elementObj["phase"].toString(),
-                                   elementObj["period"].toInt(),
-                                   elementObj["group"].toInt(),
-                                   elementObj["melting_point"].toDouble(),
-                                   elementObj["boiling_point"].toDouble(),
-                                   elementObj["density"].toDouble(),
-                                   elementObj["discovered_by"].toString(),
-                                   elementObj["year_discovered"].toInt(),
+                Element newElement(elementObj["atomic_number"].toInt(), elementObj["symbol"].toString(),
+                                   elementObj["name"].toString(), elementObj["atomic_mass"].toDouble(),
+                                   elementObj["category"].toString(), elementObj["electronegativity"].toDouble(),
+                                   elementObj["phase"].toString(), elementObj["period"].toInt(),
+                                   elementObj["group"].toInt(), elementObj["melting_point"].toDouble(),
+                                   elementObj["boiling_point"].toDouble(), elementObj["density"].toDouble(),
+                                   elementObj["discovered_by"].toString(), elementObj["year_discovered"].toInt(),
                                    elementObj["named_by"].toString());
                 result.append(newElement);
             }
