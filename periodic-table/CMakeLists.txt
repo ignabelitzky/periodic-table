@@ -25,7 +25,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         ${PROJECT_SOURCES}
         include/element.h src/element.cpp
         src/utils.cpp include/utils.h
-        resources/elements.json
+        resources.qrc
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET periodic-table APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

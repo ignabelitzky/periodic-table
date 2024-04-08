@@ -4,7 +4,7 @@
 
 int main(int argc, char *argv[])
 {
-    QList<Element> elements = load_elements_from_json_file(QString("../../resources/elements.json"));
+    QList<Element> elements = load_elements_from_json_file(QString(":/data/elements.json"));
     print_elements(elements);
     QApplication a(argc, argv);
     MainWindow w;

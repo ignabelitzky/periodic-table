@@ -1,6 +1,9 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include "../include/utils.h"
+#include <QDialog>
+#include <QLabel>
 #include <QMainWindow>
 
 QT_BEGIN_NAMESPACE
@@ -20,5 +23,9 @@ class MainWindow : public QMainWindow
 
   private:
     Ui::MainWindow *ui;
+    QList<Element> elements;
+
+  private slots:
+    void display_element_information(int elementIndex);
 };
 #endif // MAINWINDOW_H

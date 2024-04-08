@@ -43,7 +43,7 @@
       <number>0</number>
      </property>
      <item row="3" column="1">
-      <widget class="QPushButton" name="calciumButton">
+      <widget class="QPushButton" name="pushButton_20">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -76,7 +76,7 @@ Calcium</string>
       </widget>
      </item>
      <item row="4" column="2">
-      <widget class="QPushButton" name="pushButton_16">
+      <widget class="QPushButton" name="pushButton_39">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -142,7 +142,7 @@ Palladium</string>
       </widget>
      </item>
      <item row="2" column="16">
-      <widget class="QPushButton" name="pushButton_9">
+      <widget class="QPushButton" name="pushButton_17">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -175,7 +175,7 @@ Chlorine</string>
       </widget>
      </item>
      <item row="9" column="7">
-      <widget class="QPushButton" name="pushButton_96">
+      <widget class="QPushButton" name="pushButton_62">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -208,7 +208,7 @@ Samarium</string>
       </widget>
      </item>
      <item row="5" column="5">
-      <widget class="QPushButton" name="pushButton_60">
+      <widget class="QPushButton" name="pushButton_74">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -241,7 +241,7 @@ Tungsten</string>
       </widget>
      </item>
      <item row="4" column="3">
-      <widget class="QPushButton" name="pushButton_17">
+      <widget class="QPushButton" name="pushButton_40">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -307,7 +307,7 @@ Tellurium</string>
       </widget>
      </item>
      <item row="1" column="15">
-      <widget class="QPushButton" name="pushButton_4">
+      <widget class="QPushButton" name="pushButton_8">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -340,7 +340,7 @@ Oxygen</string>
       </widget>
      </item>
      <item row="5" column="12">
-      <widget class="QPushButton" name="pushButton_67">
+      <widget class="QPushButton" name="pushButton_81">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -373,7 +373,7 @@ Thallium</string>
       </widget>
      </item>
      <item row="6" column="14">
-      <widget class="QPushButton" name="pushButton_87">
+      <widget class="QPushButton" name="pushButton_115">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -406,7 +406,7 @@ Moscovium</string>
       </widget>
      </item>
      <item row="9" column="4">
-      <widget class="QPushButton" name="pushButton_93">
+      <widget class="QPushButton" name="pushButton_59">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -439,7 +439,7 @@ Praseodymium</string>
       </widget>
      </item>
      <item row="6" column="9">
-      <widget class="QPushButton" name="pushButton_82">
+      <widget class="QPushButton" name="pushButton_110">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -472,7 +472,7 @@ Darmstadtium</string>
       </widget>
      </item>
      <item row="5" column="13">
-      <widget class="QPushButton" name="pushButton_68">
+      <widget class="QPushButton" name="pushButton_82">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -505,7 +505,7 @@ Lead</string>
       </widget>
      </item>
      <item row="6" column="11">
-      <widget class="QPushButton" name="pushButton_84">
+      <widget class="QPushButton" name="pushButton_112">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -538,7 +538,7 @@ Copernicium</string>
       </widget>
      </item>
      <item row="6" column="16">
-      <widget class="QPushButton" name="pushButton_89">
+      <widget class="QPushButton" name="pushButton_117">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -571,7 +571,7 @@ Tennessine</string>
       </widget>
      </item>
      <item row="2" column="13">
-      <widget class="QPushButton" name="pushButton_12">
+      <widget class="QPushButton" name="pushButton_14">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -604,7 +604,7 @@ Silicon</string>
       </widget>
      </item>
      <item row="9" column="3">
-      <widget class="QPushButton" name="pushButton_92">
+      <widget class="QPushButton" name="pushButton_58">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -637,7 +637,7 @@ Cerium</string>
       </widget>
      </item>
      <item row="2" column="14">
-      <widget class="QPushButton" name="pushButton_11">
+      <widget class="QPushButton" name="pushButton_15">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -703,7 +703,7 @@ Cadmium</string>
       </widget>
      </item>
      <item row="1" column="17">
-      <widget class="QPushButton" name="pushButton_2">
+      <widget class="QPushButton" name="pushButton_10">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -736,7 +736,7 @@ Neon</string>
       </widget>
      </item>
      <item row="3" column="7">
-      <widget class="QPushButton" name="pushButton_30">
+      <widget class="QPushButton" name="pushButton_26">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -769,7 +769,7 @@ Iron</string>
       </widget>
      </item>
      <item row="3" column="10">
-      <widget class="QPushButton" name="pushButton_33">
+      <widget class="QPushButton" name="pushButton_29">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -802,7 +802,7 @@ Copper</string>
       </widget>
      </item>
      <item row="5" column="7">
-      <widget class="QPushButton" name="pushButton_62">
+      <widget class="QPushButton" name="pushButton_76">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -868,7 +868,7 @@ Technetium</string>
       </widget>
      </item>
      <item row="6" column="3">
-      <widget class="QPushButton" name="pushButton_76">
+      <widget class="QPushButton" name="pushButton_104">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -901,7 +901,7 @@ Rutherfordium</string>
       </widget>
      </item>
      <item row="9" column="11">
-      <widget class="QPushButton" name="pushButton_100">
+      <widget class="QPushButton" name="pushButton_66">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -934,7 +934,7 @@ Dysprosium</string>
       </widget>
      </item>
      <item row="9" column="10">
-      <widget class="QPushButton" name="pushButton_99">
+      <widget class="QPushButton" name="pushButton_65">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -967,7 +967,7 @@ Terbium</string>
       </widget>
      </item>
      <item row="3" column="9">
-      <widget class="QPushButton" name="pushButton_32">
+      <widget class="QPushButton" name="pushButton_28">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -1000,7 +1000,7 @@ Nickel</string>
       </widget>
      </item>
      <item row="6" column="15">
-      <widget class="QPushButton" name="pushButton_88">
+      <widget class="QPushButton" name="pushButton_116">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -1066,7 +1066,7 @@ Molybdenum</string>
       </widget>
      </item>
      <item row="9" column="2">
-      <widget class="QPushButton" name="pushButton_91">
+      <widget class="QPushButton" name="pushButton_57">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -1099,7 +1099,7 @@ Lanthanum</string>
       </widget>
      </item>
      <item row="6" column="0">
-      <widget class="QPushButton" name="pushButton_73">
+      <widget class="QPushButton" name="pushButton_87">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -1132,7 +1132,7 @@ Francium</string>
       </widget>
      </item>
      <item row="9" column="12">
-      <widget class="QPushButton" name="pushButton_101">
+      <widget class="QPushButton" name="pushButton_67">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -1165,7 +1165,7 @@ Holmium</string>
       </widget>
      </item>
      <item row="6" column="13">
-      <widget class="QPushButton" name="pushButton_86">
+      <widget class="QPushButton" name="pushButton_114">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -1231,7 +1231,7 @@ Rhodium</string>
       </widget>
      </item>
      <item row="5" column="6">
-      <widget class="QPushButton" name="pushButton_61">
+      <widget class="QPushButton" name="pushButton_75">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -1264,7 +1264,7 @@ Rhenium</string>
       </widget>
      </item>
      <item row="2" column="15">
-      <widget class="QPushButton" name="pushButton_10">
+      <widget class="QPushButton" name="pushButton_16">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -1297,7 +1297,7 @@ Sulfur</string>
       </widget>
      </item>
      <item row="3" column="4">
-      <widget class="QPushButton" name="pushButton_27">
+      <widget class="QPushButton" name="pushButton_23">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -1330,7 +1330,7 @@ Vanadium</string>
       </widget>
      </item>
      <item row="2" column="17">
-      <widget class="QPushButton" name="pushButton_8">
+      <widget class="QPushButton" name="pushButton_18">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -1363,7 +1363,7 @@ Argon</string>
       </widget>
      </item>
      <item row="4" column="1">
-      <widget class="QPushButton" name="strontiumButton">
+      <widget class="QPushButton" name="pushButton_38">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -1396,7 +1396,7 @@ Strontium</string>
       </widget>
      </item>
      <item row="1" column="1">
-      <widget class="QPushButton" name="berylliumButton">
+      <widget class="QPushButton" name="pushButton_4">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -1429,7 +1429,7 @@ Beryllium</string>
       </widget>
      </item>
      <item row="3" column="11">
-      <widget class="QPushButton" name="pushButton_34">
+      <widget class="QPushButton" name="pushButton_30">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -1462,7 +1462,7 @@ Zinc</string>
       </widget>
      </item>
      <item row="6" column="7">
-      <widget class="QPushButton" name="pushButton_80">
+      <widget class="QPushButton" name="pushButton_108">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -1528,7 +1528,7 @@ Iodine</string>
       </widget>
      </item>
      <item row="1" column="14">
-      <widget class="QPushButton" name="pushButton_5">
+      <widget class="QPushButton" name="pushButton_7">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -1561,7 +1561,7 @@ Nitrogen</string>
       </widget>
      </item>
      <item row="5" column="4">
-      <widget class="QPushButton" name="pushButton_59">
+      <widget class="QPushButton" name="pushButton_73">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -1594,7 +1594,7 @@ Tantalum</string>
       </widget>
      </item>
      <item row="5" column="9">
-      <widget class="QPushButton" name="pushButton_64">
+      <widget class="QPushButton" name="pushButton_78">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -1627,7 +1627,7 @@ Platinum</string>
       </widget>
      </item>
      <item row="5" column="3">
-      <widget class="QPushButton" name="pushButton_58">
+      <widget class="QPushButton" name="pushButton_72">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -1660,7 +1660,7 @@ Hafnium</string>
       </widget>
      </item>
      <item row="6" column="10">
-      <widget class="QPushButton" name="pushButton_83">
+      <widget class="QPushButton" name="pushButton_111">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -1693,7 +1693,7 @@ Roentgenium</string>
       </widget>
      </item>
      <item row="6" column="4">
-      <widget class="QPushButton" name="pushButton_77">
+      <widget class="QPushButton" name="pushButton_105">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -1726,7 +1726,7 @@ Dubnium</string>
       </widget>
      </item>
      <item row="3" column="8">
-      <widget class="QPushButton" name="pushButton_31">
+      <widget class="QPushButton" name="pushButton_27">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -1759,7 +1759,7 @@ Cobalt</string>
       </widget>
      </item>
      <item row="5" column="17">
-      <widget class="QPushButton" name="pushButton_72">
+      <widget class="QPushButton" name="pushButton_86">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -1792,7 +1792,7 @@ Radon</string>
       </widget>
      </item>
      <item row="9" column="13">
-      <widget class="QPushButton" name="pushButton_102">
+      <widget class="QPushButton" name="pushButton_68">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -1825,7 +1825,7 @@ Erbium</string>
       </widget>
      </item>
      <item row="9" column="14">
-      <widget class="QPushButton" name="pushButton_103">
+      <widget class="QPushButton" name="pushButton_69">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -1858,7 +1858,7 @@ Thulium</string>
       </widget>
      </item>
      <item row="5" column="15">
-      <widget class="QPushButton" name="pushButton_70">
+      <widget class="QPushButton" name="pushButton_84">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -1924,7 +1924,7 @@ Carbon</string>
       </widget>
      </item>
      <item row="1" column="0">
-      <widget class="QPushButton" name="lithiumButton">
+      <widget class="QPushButton" name="pushButton_3">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -1957,7 +1957,7 @@ Lithium</string>
       </widget>
      </item>
      <item row="2" column="1">
-      <widget class="QPushButton" name="magnesiumButton">
+      <widget class="QPushButton" name="pushButton_12">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -2023,7 +2023,7 @@ Ruthenium</string>
       </widget>
      </item>
      <item row="3" column="13">
-      <widget class="QPushButton" name="pushButton_36">
+      <widget class="QPushButton" name="pushButton_32">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -2056,7 +2056,7 @@ Germanium</string>
       </widget>
      </item>
      <item row="1" column="12">
-      <widget class="QPushButton" name="pushButton_7">
+      <widget class="QPushButton" name="pushButton_5">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -2089,7 +2089,7 @@ Boron</string>
       </widget>
      </item>
      <item row="3" column="5">
-      <widget class="QPushButton" name="pushButton_28">
+      <widget class="QPushButton" name="pushButton_24">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -2122,7 +2122,7 @@ Chromium</string>
       </widget>
      </item>
      <item row="4" column="0">
-      <widget class="QPushButton" name="rubidiumButton">
+      <widget class="QPushButton" name="pushButton_37">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -2155,7 +2155,7 @@ Rubidium</string>
       </widget>
      </item>
      <item row="6" column="12">
-      <widget class="QPushButton" name="pushButton_85">
+      <widget class="QPushButton" name="pushButton_113">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -2188,7 +2188,7 @@ Nihonium</string>
       </widget>
      </item>
      <item row="5" column="8">
-      <widget class="QPushButton" name="pushButton_63">
+      <widget class="QPushButton" name="pushButton_77">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -2254,7 +2254,7 @@ Indium</string>
       </widget>
      </item>
      <item row="3" column="17">
-      <widget class="QPushButton" name="pushButton_40">
+      <widget class="QPushButton" name="pushButton_36">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -2287,7 +2287,7 @@ Krypton</string>
       </widget>
      </item>
      <item row="5" column="16">
-      <widget class="QPushButton" name="pushButton_71">
+      <widget class="QPushButton" name="pushButton_85">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -2320,7 +2320,7 @@ Astatine</string>
       </widget>
      </item>
      <item row="2" column="0">
-      <widget class="QPushButton" name="sodiumButton">
+      <widget class="QPushButton" name="pushButton_11">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -2353,7 +2353,7 @@ Sodium</string>
       </widget>
      </item>
      <item row="6" column="5">
-      <widget class="QPushButton" name="pushButton_78">
+      <widget class="QPushButton" name="pushButton_106">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -2386,7 +2386,7 @@ Seaborgium</string>
       </widget>
      </item>
      <item row="9" column="8">
-      <widget class="QPushButton" name="pushButton_97">
+      <widget class="QPushButton" name="pushButton_63">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -2419,7 +2419,7 @@ Europium</string>
       </widget>
      </item>
      <item row="0" column="17">
-      <widget class="QPushButton" name="pushButton_18">
+      <widget class="QPushButton" name="pushButton_2">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -2485,7 +2485,7 @@ Niobium</string>
       </widget>
      </item>
      <item row="5" column="0">
-      <widget class="QPushButton" name="caesiumButton">
+      <widget class="QPushButton" name="pushButton_55">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -2518,7 +2518,7 @@ Caesium</string>
       </widget>
      </item>
      <item row="6" column="1">
-      <widget class="QPushButton" name="pushButton_74">
+      <widget class="QPushButton" name="pushButton_88">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -2551,7 +2551,7 @@ Radium</string>
       </widget>
      </item>
      <item row="3" column="0">
-      <widget class="QPushButton" name="potassiumButton">
+      <widget class="QPushButton" name="pushButton_19">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -2584,7 +2584,7 @@ Potassium</string>
       </widget>
      </item>
      <item row="9" column="16">
-      <widget class="QPushButton" name="pushButton_105">
+      <widget class="QPushButton" name="pushButton_71">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -2617,7 +2617,7 @@ Lutetium</string>
       </widget>
      </item>
      <item row="5" column="1">
-      <widget class="QPushButton" name="bariumButton">
+      <widget class="QPushButton" name="pushButton_56">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -2666,7 +2666,7 @@ Barium</string>
       </spacer>
      </item>
      <item row="6" column="8">
-      <widget class="QPushButton" name="pushButton_81">
+      <widget class="QPushButton" name="pushButton_109">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -2699,7 +2699,7 @@ Meitnerium</string>
       </widget>
      </item>
      <item row="5" column="11">
-      <widget class="QPushButton" name="pushButton_66">
+      <widget class="QPushButton" name="pushButton_80">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -2732,7 +2732,7 @@ Mercury</string>
       </widget>
      </item>
      <item row="3" column="6">
-      <widget class="QPushButton" name="pushButton_29">
+      <widget class="QPushButton" name="pushButton_25">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -2765,7 +2765,7 @@ Manganese</string>
       </widget>
      </item>
      <item row="9" column="15">
-      <widget class="QPushButton" name="pushButton_104">
+      <widget class="QPushButton" name="pushButton_70">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -2798,7 +2798,7 @@ Ytterbium</string>
       </widget>
      </item>
      <item row="3" column="2">
-      <widget class="QPushButton" name="pushButton_25">
+      <widget class="QPushButton" name="pushButton_21">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -2831,7 +2831,7 @@ Scandium</string>
       </widget>
      </item>
      <item row="6" column="17">
-      <widget class="QPushButton" name="pushButton_90">
+      <widget class="QPushButton" name="pushButton_118">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -2864,7 +2864,7 @@ Oganesson</string>
       </widget>
      </item>
      <item row="3" column="14">
-      <widget class="QPushButton" name="pushButton_37">
+      <widget class="QPushButton" name="pushButton_33">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -2897,7 +2897,7 @@ Arsenic</string>
       </widget>
      </item>
      <item row="9" column="9">
-      <widget class="QPushButton" name="pushButton_98">
+      <widget class="QPushButton" name="pushButton_64">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -2963,7 +2963,7 @@ Antimony</string>
       </widget>
      </item>
      <item row="3" column="3">
-      <widget class="QPushButton" name="pushButton_26">
+      <widget class="QPushButton" name="pushButton_22">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -2996,7 +2996,7 @@ Titanium</string>
       </widget>
      </item>
      <item row="3" column="16">
-      <widget class="QPushButton" name="pushButton_39">
+      <widget class="QPushButton" name="pushButton_35">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -3029,7 +3029,7 @@ Bromine</string>
       </widget>
      </item>
      <item row="1" column="16">
-      <widget class="QPushButton" name="pushButton_3">
+      <widget class="QPushButton" name="pushButton_9">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -3062,7 +3062,7 @@ Fluorine</string>
       </widget>
      </item>
      <item row="3" column="15">
-      <widget class="QPushButton" name="pushButton_38">
+      <widget class="QPushButton" name="pushButton_34">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -3095,7 +3095,7 @@ Selenium</string>
       </widget>
      </item>
      <item row="9" column="6">
-      <widget class="QPushButton" name="pushButton_95">
+      <widget class="QPushButton" name="pushButton_61">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -3161,7 +3161,7 @@ Silver</string>
       </widget>
      </item>
      <item row="3" column="12">
-      <widget class="QPushButton" name="pushButton_35">
+      <widget class="QPushButton" name="pushButton_31">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -3260,7 +3260,7 @@ Tin</string>
       </widget>
      </item>
      <item row="6" column="6">
-      <widget class="QPushButton" name="pushButton_79">
+      <widget class="QPushButton" name="pushButton_107">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -3326,7 +3326,7 @@ Xeon</string>
       </widget>
      </item>
      <item row="0" column="0">
-      <widget class="QPushButton" name="hydrogenButton">
+      <widget class="QPushButton" name="pushButton_1">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -3359,7 +3359,7 @@ Hydrogen</string>
       </widget>
      </item>
      <item row="5" column="14">
-      <widget class="QPushButton" name="pushButton_69">
+      <widget class="QPushButton" name="pushButton_83">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -3392,7 +3392,7 @@ Bismuth</string>
       </widget>
      </item>
      <item row="5" column="10">
-      <widget class="QPushButton" name="pushButton_65">
+      <widget class="QPushButton" name="pushButton_79">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -3425,7 +3425,7 @@ Gold</string>
       </widget>
      </item>
      <item row="10" column="2">
-      <widget class="QPushButton" name="pushButton_106">
+      <widget class="QPushButton" name="pushButton_89">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -3458,7 +3458,7 @@ Actinium</string>
       </widget>
      </item>
      <item row="10" column="3">
-      <widget class="QPushButton" name="pushButton_107">
+      <widget class="QPushButton" name="pushButton_90">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -3491,7 +3491,7 @@ Thorium</string>
       </widget>
      </item>
      <item row="10" column="4">
-      <widget class="QPushButton" name="pushButton_108">
+      <widget class="QPushButton" name="pushButton_91">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -3524,7 +3524,7 @@ Protactinium</string>
       </widget>
      </item>
      <item row="10" column="5">
-      <widget class="QPushButton" name="pushButton_109">
+      <widget class="QPushButton" name="pushButton_92">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -3557,7 +3557,7 @@ Uranium</string>
       </widget>
      </item>
      <item row="10" column="6">
-      <widget class="QPushButton" name="pushButton_110">
+      <widget class="QPushButton" name="pushButton_93">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -3590,7 +3590,7 @@ Neptunium</string>
       </widget>
      </item>
      <item row="10" column="7">
-      <widget class="QPushButton" name="pushButton_111">
+      <widget class="QPushButton" name="pushButton_94">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -3623,7 +3623,7 @@ Plutonium</string>
       </widget>
      </item>
      <item row="10" column="8">
-      <widget class="QPushButton" name="pushButton_112">
+      <widget class="QPushButton" name="pushButton_95">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -3656,7 +3656,7 @@ Americium</string>
       </widget>
      </item>
      <item row="10" column="9">
-      <widget class="QPushButton" name="pushButton_113">
+      <widget class="QPushButton" name="pushButton_96">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -3689,7 +3689,7 @@ Curium</string>
       </widget>
      </item>
      <item row="10" column="10">
-      <widget class="QPushButton" name="pushButton_114">
+      <widget class="QPushButton" name="pushButton_97">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -3722,7 +3722,7 @@ Berkelium</string>
       </widget>
      </item>
      <item row="10" column="11">
-      <widget class="QPushButton" name="pushButton_115">
+      <widget class="QPushButton" name="pushButton_98">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -3755,7 +3755,7 @@ Californium</string>
       </widget>
      </item>
      <item row="10" column="12">
-      <widget class="QPushButton" name="pushButton_116">
+      <widget class="QPushButton" name="pushButton_99">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -3788,7 +3788,7 @@ Einsteinium</string>
       </widget>
      </item>
      <item row="10" column="13">
-      <widget class="QPushButton" name="pushButton_117">
+      <widget class="QPushButton" name="pushButton_100">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -3821,7 +3821,7 @@ Fermium</string>
       </widget>
      </item>
      <item row="10" column="14">
-      <widget class="QPushButton" name="pushButton_118">
+      <widget class="QPushButton" name="pushButton_101">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -3854,7 +3854,7 @@ Mendelevium</string>
       </widget>
      </item>
      <item row="10" column="15">
-      <widget class="QPushButton" name="pushButton_119">
+      <widget class="QPushButton" name="pushButton_102">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -3887,7 +3887,7 @@ Nobelium</string>
       </widget>
      </item>
      <item row="10" column="16">
-      <widget class="QPushButton" name="pushButton_120">
+      <widget class="QPushButton" name="pushButton_103">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -3920,7 +3920,7 @@ Lawrencium</string>
       </widget>
      </item>
      <item row="9" column="5">
-      <widget class="QPushButton" name="pushButton_94">
+      <widget class="QPushButton" name="pushButton_60">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
