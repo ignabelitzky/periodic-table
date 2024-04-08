@@ -1,7 +1,9 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include "../include/params.h"
 #include "../include/utils.h"
+#include <QButtonGroup>
 #include <QDialog>
 #include <QLabel>
 #include <QMainWindow>
@@ -23,7 +25,9 @@ class MainWindow : public QMainWindow
 
   private:
     Ui::MainWindow *ui;
+    QList<QButtonGroup *> elementButtons;
     QList<Element> elements;
+    void set_element_buttons_style();
 
   private slots:
     void display_element_information(int elementIndex);

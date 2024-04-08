@@ -4,6 +4,21 @@
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    elementButtons.append(ui->alkaliMetalsGroup);
+    elementButtons.append(ui->alkalineEarthMetalsGroup);
+    elementButtons.append(ui->transitionMetalsGroup);
+    elementButtons.append(ui->halogensGroup);
+    elementButtons.append(ui->otherNonmetalsGroup);
+    elementButtons.append(ui->metalloidsGroup);
+    elementButtons.append(ui->postTransitionMetalsGroup);
+    elementButtons.append(ui->lanthanoidGroup);
+    elementButtons.append(ui->actinoidGroup);
+    elementButtons.append(ui->nobleGasGroup);
+    elementButtons.append(ui->unknownGroup);
+
+    set_element_buttons_style();
+
     this->elements = load_elements_from_json_file(":/data/elements.json");
     for (int i = 0; i < 128; ++i)
     {
@@ -21,12 +36,23 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+void MainWindow::set_element_buttons_style()
+{
+    int idx = 0;
+    for (auto buttonGroup : elementButtons)
+    {
+        QString styleSheet = QString("QPushButton {background-color: %1; color: black;}").arg(colors.at(idx));
+        for (auto button : buttonGroup->buttons())
+        {
+            button->setStyleSheet(styleSheet);
+        }
+        idx++;
+    }
+}
+
 void MainWindow::display_element_information(int elementIndex)
 {
     Element element = elements.at(elementIndex);
-    QStringList properties = {"Atomic Number:",     "Symbol:",  "Name:",          "Atomic Mass:",     "Category:",
-                              "Electronegativity:", "Phase:",   "Period:",        "Group:",           "Melting Point:",
-                              "Boiling Point:",     "Density:", "Discovered by:", "Year discovered:", "Named by:"};
     QStringList values = {QString::number(element.get_atomic_number()),
                           element.get_symbol(),
                           element.get_name(),

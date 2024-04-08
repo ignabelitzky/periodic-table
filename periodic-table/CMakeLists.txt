@@ -23,8 +23,9 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(periodic-table
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
-        include/element.h src/element.cpp
-        src/utils.cpp include/utils.h
+        include/element.h   src/element.cpp
+        include/utils.h     src/utils.cpp
+        include/params.h
         resources.qrc
     )
 # Define target properties for Android with Qt 6 as:
