@@ -108,77 +108,77 @@ void Element::set_named_by(QString namedBy)
 }
 
 // getters
-int Element::get_atomic_number()
+int Element::get_atomic_number() const
 {
     return atomicNumber;
 }
 
-QString Element::get_symbol()
+QString Element::get_symbol() const
 {
     return symbol;
 }
 
-QString Element::get_name()
+QString Element::get_name() const
 {
     return name;
 }
 
-float Element::get_atomic_mass()
+float Element::get_atomic_mass() const
 {
     return atomicMass;
 }
 
-QString Element::get_category()
+QString Element::get_category() const
 {
     return category;
 }
 
-float Element::get_electronegativity()
+float Element::get_electronegativity() const
 {
     return electronegativity;
 }
 
-QString Element::get_phase()
+QString Element::get_phase() const
 {
     return phase;
 }
 
-int Element::get_period()
+int Element::get_period() const
 {
     return period;
 }
 
-int Element::get_group()
+int Element::get_group() const
 {
     return group;
 }
 
-float Element::get_melting_point()
+float Element::get_melting_point() const
 {
     return meltingPoint;
 }
 
-float Element::get_boiling_point()
+float Element::get_boiling_point() const
 {
     return boilingPoint;
 }
 
-float Element::get_density()
+float Element::get_density() const
 {
     return density;
 }
 
-QString Element::get_discovered_by()
+QString Element::get_discovered_by() const
 {
     return discoveredBy;
 }
 
-int Element::get_year_discovered()
+int Element::get_year_discovered() const
 {
     return yearDiscovered;
 }
 
-QString Element::get_named_by()
+QString Element::get_named_by() const
 {
     return namedBy;
 }

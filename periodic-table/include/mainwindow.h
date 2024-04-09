@@ -29,9 +29,12 @@ class MainWindow : public QMainWindow
     QList<QButtonGroup *> elementButtons;
     QList<Element> elements;
     QGridLayout *referenceLayout;
+    void set_element_buttons_groups();
     void set_element_buttons_style();
+    void set_elements_connections();
+    void add_elements_reference();
 
   private slots:
-    void display_element_information(int elementIndex);
+    void display_element_information(const int &elementIndex);
 };
 #endif // MAINWINDOW_H

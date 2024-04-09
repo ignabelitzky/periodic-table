@@ -30,21 +30,21 @@ class Element
     void set_named_by(QString namedBy);
 
     // getters
-    int get_atomic_number();
-    QString get_symbol();
-    QString get_name();
-    float get_atomic_mass();
-    QString get_category();
-    float get_electronegativity();
-    QString get_phase();
-    int get_period();
-    int get_group();
-    float get_melting_point();
-    float get_boiling_point();
-    float get_density();
-    QString get_discovered_by();
-    int get_year_discovered();
-    QString get_named_by();
+    int get_atomic_number() const;
+    QString get_symbol() const;
+    QString get_name() const;
+    float get_atomic_mass() const;
+    QString get_category() const;
+    float get_electronegativity() const;
+    QString get_phase() const;
+    int get_period() const;
+    int get_group() const;
+    float get_melting_point() const;
+    float get_boiling_point() const;
+    float get_density() const;
+    QString get_discovered_by() const;
+    int get_year_discovered() const;
+    QString get_named_by() const;
 
   private:
     int atomicNumber;

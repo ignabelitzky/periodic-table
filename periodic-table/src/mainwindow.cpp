@@ -5,53 +5,12 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
 {
     ui->setupUi(this);
 
-    elementButtons.append(ui->alkaliMetalsGroup);
-    elementButtons.append(ui->alkalineEarthMetalsGroup);
-    elementButtons.append(ui->transitionMetalsGroup);
-    elementButtons.append(ui->halogensGroup);
-    elementButtons.append(ui->otherNonmetalsGroup);
-    elementButtons.append(ui->metalloidsGroup);
-    elementButtons.append(ui->postTransitionMetalsGroup);
-    elementButtons.append(ui->lanthanoidGroup);
-    elementButtons.append(ui->actinoidGroup);
-    elementButtons.append(ui->nobleGasGroup);
-    elementButtons.append(ui->unknownGroup);
+    this->elements = load_elements_from_json_file(ELEMENTS_JSON_PATH);
 
+    set_element_buttons_groups();
     set_element_buttons_style();
-
-    this->elements = load_elements_from_json_file(":/data/elements.json");
-
-    for (int i = 0; i < 128; ++i)
-    {
-        QString buttonName = QString("pushButton_%1").arg(i + 1);
-        QPushButton *button = findChild<QPushButton *>(buttonName);
-        if (button)
-        {
-            connect(button, &QPushButton::clicked, this, [=]() { display_element_information(i); });
-        }
-    }
-
-    // Add reference to the elements.
-    referenceLayout = ui->centralwidget->findChild<QGridLayout *>(QString("referenceGridLayout"));
-    int row = 0, col = 0;
-    for (int i = 0; i < elementsType.size(); ++i)
-    {
-        QLabel *referenceLabel = new QLabel(QString("%1").arg(elementsType[i]));
-        QPushButton *referenceColor = new QPushButton();
-        referenceColor->setFixedSize(20, 20);
-        QString styleSheet = QString("QPushButton {"
-                                     "background-color: %1;"
-                                     "}")
-                                 .arg(colors.at(i));
-        referenceColor->setStyleSheet(styleSheet);
-        referenceLayout->addWidget(referenceColor, row, col++);
-        referenceLayout->addWidget(referenceLabel, row, col++);
-        if (col == 8)
-        {
-            col = 0;
-            ++row;
-        }
-    }
+    add_elements_reference();
+    set_elements_connections();
 }
 
 MainWindow::~MainWindow()
@@ -64,7 +23,17 @@ void MainWindow::set_element_buttons_style()
     int idx = 0;
     for (auto buttonGroup : elementButtons)
     {
-        QString styleSheet = QString("QPushButton {background-color: %1; color: black;}").arg(colors.at(idx));
+        QString styleSheet = QString("QPushButton {"
+                                     "background-color: %1;"
+                                     "border-radius: 3px;"
+                                     "padding: 2px;"
+                                     "min-width: 80px;"
+                                     "min-height: 50px;"
+                                     "border: 1px solid black;"
+                                     "color: black;}"
+                                     "QPushButton:hover {"
+                                     "background-color: white;}")
+                                 .arg(elementsType.at(idx).second);
         for (auto button : buttonGroup->buttons())
         {
             button->setStyleSheet(styleSheet);
@@ -73,9 +42,33 @@ void MainWindow::set_element_buttons_style()
     }
 }
 
-void MainWindow::display_element_information(int elementIndex)
+void MainWindow::set_element_buttons_groups()
 {
-    Element element = elements.at(elementIndex);
+    elementButtons.append(ui->alkaliMetalsGroup);
+    elementButtons.append(ui->alkalineEarthMetalsGroup);
+    elementButtons.append(ui->transitionMetalsGroup);
+    elementButtons.append(ui->halogensGroup);
+    elementButtons.append(ui->otherNonmetalsGroup);
+    elementButtons.append(ui->metalloidsGroup);
+    elementButtons.append(ui->postTransitionMetalsGroup);
+    elementButtons.append(ui->lanthanoidGroup);
+    elementButtons.append(ui->actinoidGroup);
+    elementButtons.append(ui->nobleGasGroup);
+    elementButtons.append(ui->unknownGroup);
+}
+
+void MainWindow::display_element_information(const int &elementIndex)
+{
+    const Element &element = elements.at(elementIndex);
+
+    QDialog *infoDialog = new QDialog(this);
+    infoDialog->setWindowTitle(element.get_name());
+
+    QVBoxLayout *layout = new QVBoxLayout(infoDialog);
+
+    QGridLayout *gridLayout = new QGridLayout();
+    layout->addLayout(gridLayout);
+
     QStringList values = {QString::number(element.get_atomic_number()),
                           element.get_symbol(),
                           element.get_name(),
@@ -92,23 +85,63 @@ void MainWindow::display_element_information(int elementIndex)
                           QString::number(element.get_year_discovered()),
                           element.get_named_by()};
 
-    QDialog *infoDialog = new QDialog(this);
-    infoDialog->setWindowTitle(element.get_name());
-
-    QVBoxLayout *layout = new QVBoxLayout(infoDialog);
-    QGridLayout *gridLayout = new QGridLayout();
-    layout->addLayout(gridLayout);
+    QString styleSheetProperty("QLabel {"
+                               "font-size: 14px;"
+                               "padding: 4px;"
+                               "font-weight: bold;}");
+    QString styleSheetValue("QLabel {"
+                            "font-size: 14px;"
+                            "padding: 4px;}");
 
     for (int i = 0; i < properties.size(); ++i)
     {
         QLabel *propertyLabel = new QLabel(properties.at(i));
         QLabel *valueLabel = new QLabel(values.at(i));
+        propertyLabel->setStyleSheet(styleSheetProperty);
+        valueLabel->setStyleSheet(styleSheetValue);
 
         gridLayout->addWidget(propertyLabel, i, 0);
         gridLayout->addWidget(valueLabel, i, 1);
     }
 
-    infoDialog->setLayout(layout);
+    infoDialog->setStyleSheet(QString("background-color: white;"));
 
     infoDialog->exec();
+}
+
+void MainWindow::add_elements_reference()
+{
+    referenceLayout = ui->centralwidget->findChild<QGridLayout *>(QString("referenceGridLayout"));
+    int row = 0, col = 0;
+    for (int i = 0; i < elementsType.size(); ++i)
+    {
+        QLabel *referenceLabel = new QLabel(QString("%1").arg(elementsType.at(i).first));
+        QPushButton *referenceColor = new QPushButton();
+        referenceColor->setFixedSize(20, 20);
+        QString styleSheet = QString("QPushButton {"
+                                     "background-color: %1;"
+                                     "}")
+                                 .arg(elementsType.at(i).second);
+        referenceColor->setStyleSheet(styleSheet);
+        referenceLayout->addWidget(referenceColor, row, col++);
+        referenceLayout->addWidget(referenceLabel, row, col++);
+        if (col == MAX_REFERENCE_COLS)
+        {
+            col = 0;
+            ++row;
+        }
+    }
+}
+
+void MainWindow::set_elements_connections()
+{
+    for (int i = 0; i < NUM_ELEMENTS; ++i)
+    {
+        QString buttonName = QString("pushButton_%1").arg(i + 1);
+        QPushButton *button = findChild<QPushButton *>(buttonName);
+        if (button)
+        {
+            connect(button, &QPushButton::clicked, this, [=]() { display_element_information(i); });
+        }
+    }
 }
