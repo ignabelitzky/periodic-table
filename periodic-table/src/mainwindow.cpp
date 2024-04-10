@@ -1,12 +1,15 @@
 #include "../include/mainwindow.h"
 #include "../ui/ui_mainwindow.h"
 
+/* PUBLIC METHODS */
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
 
     this->elements = load_elements_from_json_file(ELEMENTS_JSON_PATH);
 
+    create_actions();
+    create_menus();
     set_element_buttons_groups();
     set_element_buttons_style();
     add_elements_reference();
@@ -16,6 +19,34 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+/* PRIVATE METHODS */
+void MainWindow::create_actions()
+{
+    aboutAction = new QAction(tr("&About"), this);
+    aboutAction->setStatusTip(tr("Show the application's About box"));
+}
+
+void MainWindow::create_menus()
+{
+    helpMenu = menuBar()->addMenu(tr("&Help"));
+    helpMenu->addAction(aboutAction);
+}
+
+void MainWindow::set_element_buttons_groups()
+{
+    elementButtons.append(ui->alkaliMetalsGroup);
+    elementButtons.append(ui->alkalineEarthMetalsGroup);
+    elementButtons.append(ui->transitionMetalsGroup);
+    elementButtons.append(ui->halogensGroup);
+    elementButtons.append(ui->otherNonmetalsGroup);
+    elementButtons.append(ui->metalloidsGroup);
+    elementButtons.append(ui->postTransitionMetalsGroup);
+    elementButtons.append(ui->lanthanoidGroup);
+    elementButtons.append(ui->actinoidGroup);
+    elementButtons.append(ui->nobleGasGroup);
+    elementButtons.append(ui->unknownGroup);
 }
 
 void MainWindow::set_element_buttons_style()
@@ -42,21 +73,47 @@ void MainWindow::set_element_buttons_style()
     }
 }
 
-void MainWindow::set_element_buttons_groups()
+void MainWindow::set_elements_connections()
 {
-    elementButtons.append(ui->alkaliMetalsGroup);
-    elementButtons.append(ui->alkalineEarthMetalsGroup);
-    elementButtons.append(ui->transitionMetalsGroup);
-    elementButtons.append(ui->halogensGroup);
-    elementButtons.append(ui->otherNonmetalsGroup);
-    elementButtons.append(ui->metalloidsGroup);
-    elementButtons.append(ui->postTransitionMetalsGroup);
-    elementButtons.append(ui->lanthanoidGroup);
-    elementButtons.append(ui->actinoidGroup);
-    elementButtons.append(ui->nobleGasGroup);
-    elementButtons.append(ui->unknownGroup);
+    for (int i = 0; i < NUM_ELEMENTS; ++i)
+    {
+        QString buttonName = QString("pushButton_%1").arg(i + 1);
+        QPushButton *button = findChild<QPushButton *>(buttonName);
+        if (button)
+        {
+            connect(button, &QPushButton::clicked, this, [=]() { display_element_information(i); });
+        }
+    }
+
+    // About action
+    connect(aboutAction, &QAction::triggered, this, &MainWindow::show_about_dialog);
 }
 
+void MainWindow::add_elements_reference()
+{
+    referenceLayout = ui->centralwidget->findChild<QGridLayout *>(QString("referenceGridLayout"));
+    int row = 0, col = 0;
+    for (int i = 0; i < elementsType.size(); ++i)
+    {
+        QLabel *referenceLabel = new QLabel(QString("%1").arg(elementsType.at(i).first));
+        QPushButton *referenceColor = new QPushButton();
+        referenceColor->setFixedSize(20, 20);
+        QString styleSheet = QString("QPushButton {"
+                                     "background-color: %1;"
+                                     "}")
+                                 .arg(elementsType.at(i).second);
+        referenceColor->setStyleSheet(styleSheet);
+        referenceLayout->addWidget(referenceColor, row, col++);
+        referenceLayout->addWidget(referenceLabel, row, col++);
+        if (col == MAX_REFERENCE_COLS)
+        {
+            col = 0;
+            ++row;
+        }
+    }
+}
+
+/* PRIVATE SLOTS */
 void MainWindow::display_element_information(const int &elementIndex)
 {
     const Element &element = elements.at(elementIndex);
@@ -109,39 +166,8 @@ void MainWindow::display_element_information(const int &elementIndex)
     infoDialog->exec();
 }
 
-void MainWindow::add_elements_reference()
+void MainWindow::show_about_dialog()
 {
-    referenceLayout = ui->centralwidget->findChild<QGridLayout *>(QString("referenceGridLayout"));
-    int row = 0, col = 0;
-    for (int i = 0; i < elementsType.size(); ++i)
-    {
-        QLabel *referenceLabel = new QLabel(QString("%1").arg(elementsType.at(i).first));
-        QPushButton *referenceColor = new QPushButton();
-        referenceColor->setFixedSize(20, 20);
-        QString styleSheet = QString("QPushButton {"
-                                     "background-color: %1;"
-                                     "}")
-                                 .arg(elementsType.at(i).second);
-        referenceColor->setStyleSheet(styleSheet);
-        referenceLayout->addWidget(referenceColor, row, col++);
-        referenceLayout->addWidget(referenceLabel, row, col++);
-        if (col == MAX_REFERENCE_COLS)
-        {
-            col = 0;
-            ++row;
-        }
-    }
-}
-
-void MainWindow::set_elements_connections()
-{
-    for (int i = 0; i < NUM_ELEMENTS; ++i)
-    {
-        QString buttonName = QString("pushButton_%1").arg(i + 1);
-        QPushButton *button = findChild<QPushButton *>(buttonName);
-        if (button)
-        {
-            connect(button, &QPushButton::clicked, this, [=]() { display_element_information(i); });
-        }
-    }
+    QMessageBox *aboutBox = new QMessageBox(this);
+    aboutBox->about(this, tr("About Periodic Table"), tr("This is a Qt application created by Ignacio Belitzky."));
 }

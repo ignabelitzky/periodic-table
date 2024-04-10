@@ -4,10 +4,12 @@
 #include "../include/params.h"
 #include "../include/utils.h"
 #include <QButtonGroup>
+#include <QDesktopServices>
 #include <QDialog>
 #include <QGridLayout>
 #include <QLabel>
 #include <QMainWindow>
+#include <QMessageBox>
 
 QT_BEGIN_NAMESPACE
 namespace Ui
@@ -26,9 +28,13 @@ class MainWindow : public QMainWindow
 
   private:
     Ui::MainWindow *ui;
+    QMenu *helpMenu;
+    QAction *aboutAction;
     QList<QButtonGroup *> elementButtons;
     QList<Element> elements;
     QGridLayout *referenceLayout;
+    void create_actions();
+    void create_menus();
     void set_element_buttons_groups();
     void set_element_buttons_style();
     void set_elements_connections();
@@ -36,5 +42,6 @@ class MainWindow : public QMainWindow
 
   private slots:
     void display_element_information(const int &elementIndex);
+    void show_about_dialog();
 };
 #endif // MAINWINDOW_H
