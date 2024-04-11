@@ -8,7 +8,7 @@ This application provides an interactive Periodic Table with detailed informatio
 ## Features
 - View detailed information about each element, including atomic number, symbol, atomic mass, electronegativity, and more.
 - Interactive graphical representation of the Periodic Table.
-- (TO-DO) Search functionality to quickly find elements by name, symbol, or atomic number.
+- Search functionality to quickly find elements by name.
 - Color-coded representation for different element categories (e.g. metals, nonmetals, metalloids).
 - Available for Linux.
 
