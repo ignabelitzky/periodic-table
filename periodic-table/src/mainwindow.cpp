@@ -14,6 +14,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     set_element_buttons_style();
     add_elements_reference();
     set_elements_connections();
+    set_search_functionalities();
 }
 
 MainWindow::~MainWindow()
@@ -113,6 +114,26 @@ void MainWindow::add_elements_reference()
     }
 }
 
+void MainWindow::set_search_functionalities()
+{
+    searchLabel = ui->centralwidget->findChild<QLabel *>(QString("searchElementLabel"));
+    searchLineEdit = ui->centralwidget->findChild<QLineEdit *>(QString("searchElementLineEdit"));
+    searchLineEdit->setStyleSheet(QString("background-color: white;"));
+
+    QStringList elementNames;
+    for (int i = 0; i < elements.size(); ++i)
+    {
+        elementNames.append(elements.at(i).get_name());
+    }
+    QStringListModel *model = new QStringListModel(elementNames);
+    QCompleter *completer = new QCompleter(model);
+
+    searchLineEdit->setCompleter(completer);
+
+    connect(searchLineEdit, &QLineEdit::returnPressed, this,
+            [=]() { display_element_information_by_name(searchLineEdit->text()); });
+}
+
 /* PRIVATE SLOTS */
 void MainWindow::display_element_information(const int &elementIndex)
 {
@@ -164,6 +185,75 @@ void MainWindow::display_element_information(const int &elementIndex)
     infoDialog->setStyleSheet(QString("background-color: white;"));
 
     infoDialog->exec();
+}
+
+void MainWindow::display_element_information_by_name(const QString &elementName)
+{
+    bool found = false;
+    Element element = elements.at(0);
+    for (const Element &elem : elements)
+    {
+        if (elem.get_name() == elementName)
+        {
+            element = elem;
+            found = true;
+            break;
+        }
+    }
+    if (found)
+    {
+        QDialog *infoDialog = new QDialog(this);
+        infoDialog->setWindowTitle(element.get_name());
+
+        QVBoxLayout *layout = new QVBoxLayout(infoDialog);
+
+        QGridLayout *gridLayout = new QGridLayout();
+        layout->addLayout(gridLayout);
+
+        QStringList values = {QString::number(element.get_atomic_number()),
+                              element.get_symbol(),
+                              element.get_name(),
+                              QString::number(element.get_atomic_mass()),
+                              element.get_category(),
+                              QString::number(element.get_electronegativity()),
+                              element.get_phase(),
+                              QString::number(element.get_period()),
+                              QString::number(element.get_group()),
+                              QString::number(element.get_melting_point()),
+                              QString::number(element.get_boiling_point()),
+                              QString::number(element.get_density()),
+                              element.get_discovered_by(),
+                              QString::number(element.get_year_discovered()),
+                              element.get_named_by()};
+
+        QString styleSheetProperty("QLabel {"
+                                   "font-size: 14px;"
+                                   "padding: 4px;"
+                                   "font-weight: bold;}");
+        QString styleSheetValue("QLabel {"
+                                "font-size: 14px;"
+                                "padding: 4px;}");
+
+        for (int i = 0; i < properties.size(); ++i)
+        {
+            QLabel *propertyLabel = new QLabel(properties.at(i));
+            QLabel *valueLabel = new QLabel(values.at(i));
+            propertyLabel->setStyleSheet(styleSheetProperty);
+            valueLabel->setStyleSheet(styleSheetValue);
+
+            gridLayout->addWidget(propertyLabel, i, 0);
+            gridLayout->addWidget(valueLabel, i, 1);
+        }
+
+        infoDialog->setStyleSheet(QString("background-color: white;"));
+
+        infoDialog->exec();
+    }
+    else
+    {
+        QMessageBox::critical(nullptr, "Error", "Element not found!");
+    }
+    searchLineEdit->clear();
 }
 
 void MainWindow::show_about_dialog()
