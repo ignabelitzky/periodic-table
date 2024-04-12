@@ -29,15 +29,20 @@ class MainWindow : public QMainWindow
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+  protected:
+    bool eventFilter(QObject *obj, QEvent *event) override;
+
   private:
     Ui::MainWindow *ui;
     QMenu *helpMenu;
+    QStatusBar *statusBar;
     QAction *aboutAction;
     QList<QButtonGroup *> elementButtons;
     QList<Element> elements;
     QGridLayout *referenceLayout;
     QLabel *searchLabel;
     QLineEdit *searchLineEdit;
+
     void create_actions();
     void create_menus();
     void set_element_buttons_groups();
@@ -45,6 +50,8 @@ class MainWindow : public QMainWindow
     void set_elements_connections();
     void add_elements_reference();
     void set_search_functionalities();
+    void display_element_in_status_bar(const int &elementIndex);
+    void clear_status_bar();
 
   private slots:
     void display_element_information(const int &elementIndex);

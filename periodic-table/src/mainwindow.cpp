@@ -8,6 +8,8 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
 
     this->elements = load_elements_from_json_file(ELEMENTS_JSON_PATH);
 
+    statusBar = QMainWindow::statusBar();
+
     create_actions();
     create_menus();
     set_element_buttons_groups();
@@ -20,6 +22,22 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+/* PROTECTED METHODS */
+bool MainWindow::eventFilter(QObject *obj, QEvent *event)
+{
+    if (event->type() == QEvent::Enter)
+    {
+        QStringList parts = obj->objectName().split('_');
+        int elementIndex = parts[1].toInt() - 1;
+        display_element_in_status_bar(elementIndex);
+    }
+    else if (event->type() == QEvent::Leave)
+    {
+        clear_status_bar();
+    }
+    return QMainWindow::eventFilter(obj, event);
 }
 
 /* PRIVATE METHODS */
@@ -83,6 +101,7 @@ void MainWindow::set_elements_connections()
         if (button)
         {
             connect(button, &QPushButton::clicked, this, [=]() { display_element_information(i); });
+            button->installEventFilter(this);
         }
     }
 
@@ -132,6 +151,21 @@ void MainWindow::set_search_functionalities()
 
     connect(searchLineEdit, &QLineEdit::returnPressed, this,
             [=]() { display_element_information_by_name(searchLineEdit->text()); });
+}
+
+void MainWindow::display_element_in_status_bar(const int &elementIndex)
+{
+    QString elementInformation = QString("%1 -- Atomic Number %2 -- Period %3 -- Group: %4")
+                                     .arg(elements[elementIndex].get_name())
+                                     .arg(elements[elementIndex].get_atomic_number())
+                                     .arg(elements[elementIndex].get_period())
+                                     .arg(elements[elementIndex].get_group());
+    statusBar->showMessage(elementInformation);
+}
+
+void MainWindow::clear_status_bar()
+{
+    statusBar->clearMessage();
 }
 
 /* PRIVATE SLOTS */
