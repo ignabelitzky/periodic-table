@@ -2,5 +2,6 @@
     <qresource prefix="/data">
         <file>elements.json</file>
         <file>periodic.png</file>
+        <file>title_periodic_table.png</file>
     </qresource>
 </RCC>

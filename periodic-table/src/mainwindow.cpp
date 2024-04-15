@@ -57,8 +57,8 @@ void MainWindow::create_menus()
 void MainWindow::set_title_label()
 {
     titleLabel = ui->centralwidget->findChild<QLabel *>(QString("titleLabel"));
-    QPixmap pix(":/data/periodic.png");
-    int newWidth = 600;
+    QPixmap pix(":/data/title_periodic_table.png");
+    int newWidth = 800;
     int newHeight = 150;
     QPixmap scaledPix = pix.scaled(newWidth, newHeight, Qt::KeepAspectRatio, Qt::SmoothTransformation);
     titleLabel->setPixmap(scaledPix);
