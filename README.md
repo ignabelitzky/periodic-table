@@ -3,7 +3,7 @@ A graphical Periodic Table application developed using Qt and C++.
 
 ## Description
 This application provides an interactive Periodic Table with detailed information about each element. It offers a user-friendly interface for exploring various properties of chemical elements.
-![periodic-table](https://github.com/ignabelitzky/periodic-table/assets/13757390/17237303-a69f-4983-b3c4-8ac36a379a7e)
+![periodic_table_GIF](https://github.com/ignabelitzky/periodic-table/assets/13757390/5295e5b1-fb58-416a-b893-2938663748b7)
 
 ## Features
 - View detailed information about each element, including atomic number, symbol, atomic mass, electronegativity, and more.
