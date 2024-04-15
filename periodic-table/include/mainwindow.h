@@ -37,6 +37,7 @@ class MainWindow : public QMainWindow
     QMenu *helpMenu;
     QStatusBar *statusBar;
     QAction *aboutAction;
+    QLabel *titleLabel;
     QList<QButtonGroup *> elementButtons;
     QList<Element> elements;
     QGridLayout *referenceLayout;
@@ -45,6 +46,7 @@ class MainWindow : public QMainWindow
 
     void create_actions();
     void create_menus();
+    void set_title_label();
     void set_element_buttons_groups();
     void set_element_buttons_style();
     void set_elements_connections();

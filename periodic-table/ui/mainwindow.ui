@@ -3235,7 +3235,7 @@ Osmium</string>
          </font>
         </property>
         <property name="text">
-         <string>Periodic Table</string>
+         <string/>
         </property>
        </widget>
       </item>
@@ -4403,16 +4403,16 @@ Nitrogen</string>
  <resources/>
  <connections/>
  <buttongroups>
-  <buttongroup name="unknownGroup"/>
+  <buttongroup name="lanthanoidGroup"/>
+  <buttongroup name="halogensGroup"/>
+  <buttongroup name="metalloidsGroup"/>
+  <buttongroup name="alkalineEarthMetalsGroup"/>
   <buttongroup name="alkaliMetalsGroup"/>
+  <buttongroup name="transitionMetalsGroup"/>
+  <buttongroup name="unknownGroup"/>
+  <buttongroup name="otherNonmetalsGroup"/>
+  <buttongroup name="nobleGasGroup"/>
   <buttongroup name="actinoidGroup"/>
   <buttongroup name="postTransitionMetalsGroup"/>
-  <buttongroup name="otherNonmetalsGroup"/>
-  <buttongroup name="alkalineEarthMetalsGroup"/>
-  <buttongroup name="halogensGroup"/>
-  <buttongroup name="transitionMetalsGroup"/>
-  <buttongroup name="lanthanoidGroup"/>
-  <buttongroup name="metalloidsGroup"/>
-  <buttongroup name="nobleGasGroup"/>
  </buttongroups>
 </ui>

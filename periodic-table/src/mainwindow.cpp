@@ -12,6 +12,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
 
     create_actions();
     create_menus();
+    set_title_label();
     set_element_buttons_groups();
     set_element_buttons_style();
     add_elements_reference();
@@ -51,6 +52,17 @@ void MainWindow::create_menus()
 {
     helpMenu = menuBar()->addMenu(tr("&Help"));
     helpMenu->addAction(aboutAction);
+}
+
+void MainWindow::set_title_label()
+{
+    titleLabel = ui->centralwidget->findChild<QLabel *>(QString("titleLabel"));
+    QPixmap pix(":/data/periodic.png");
+    int newWidth = 600;
+    int newHeight = 150;
+    QPixmap scaledPix = pix.scaled(newWidth, newHeight, Qt::KeepAspectRatio, Qt::SmoothTransformation);
+    titleLabel->setPixmap(scaledPix);
+    titleLabel->setFixedSize(newWidth, newHeight);
 }
 
 void MainWindow::set_element_buttons_groups()
