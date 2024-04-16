@@ -34,8 +34,13 @@ class MainWindow : public QMainWindow
 
   private:
     Ui::MainWindow *ui;
+    QMenu *fileMenu;
+    QMenu *windowMenu;
     QMenu *helpMenu;
     QStatusBar *statusBar;
+    QAction *exitAction;
+    QAction *minimizeAction;
+    QAction *maximizeAction;
     QAction *aboutAction;
     QLabel *titleLabel;
     QList<QButtonGroup *> elementButtons;
@@ -58,6 +63,8 @@ class MainWindow : public QMainWindow
   private slots:
     void display_element_information(const int &elementIndex);
     void display_element_information_by_name(const QString &elementName);
+    void minimize_window();
+    void maximize_window();
     void show_about_dialog();
 };
 #endif // MAINWINDOW_H

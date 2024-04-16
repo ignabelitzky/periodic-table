@@ -2213,13 +2213,24 @@ Tennessine</string>
       </item>
       <item>
        <widget class="QLabel" name="searchElementLabel">
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
         <property name="text">
          <string>Search element</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="searchElementLineEdit"/>
+       <widget class="QLineEdit" name="searchElementLineEdit">
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+       </widget>
       </item>
       <item>
        <spacer name="horizontalSpacer_4">
@@ -4463,16 +4474,16 @@ Nitrogen</string>
  <resources/>
  <connections/>
  <buttongroups>
-  <buttongroup name="transitionMetalsGroup"/>
-  <buttongroup name="nobleGasGroup"/>
-  <buttongroup name="actinoidGroup"/>
   <buttongroup name="postTransitionMetalsGroup"/>
   <buttongroup name="alkalineEarthMetalsGroup"/>
-  <buttongroup name="lanthanoidGroup"/>
-  <buttongroup name="halogensGroup"/>
-  <buttongroup name="unknownGroup"/>
   <buttongroup name="alkaliMetalsGroup"/>
-  <buttongroup name="metalloidsGroup"/>
+  <buttongroup name="transitionMetalsGroup"/>
   <buttongroup name="otherNonmetalsGroup"/>
+  <buttongroup name="nobleGasGroup"/>
+  <buttongroup name="unknownGroup"/>
+  <buttongroup name="actinoidGroup"/>
+  <buttongroup name="metalloidsGroup"/>
+  <buttongroup name="halogensGroup"/>
+  <buttongroup name="lanthanoidGroup"/>
  </buttongroups>
 </ui>

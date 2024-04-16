@@ -44,13 +44,25 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event)
 /* PRIVATE METHODS */
 void MainWindow::create_actions()
 {
+    exitAction = new QAction(tr("&Exit"));
+    exitAction->setShortcut(QKeySequence::Quit);
+    minimizeAction = new QAction(tr("Minimize"));
+    maximizeAction = new QAction(tr("Maximize"));
     aboutAction = new QAction(tr("&About"), this);
+    exitAction->setStatusTip(tr("Close the application"));
+    minimizeAction->setStatusTip(tr("Minimize window"));
+    maximizeAction->setStatusTip(tr("Maximize window"));
     aboutAction->setStatusTip(tr("Show the application's About box"));
 }
 
 void MainWindow::create_menus()
 {
+    fileMenu = menuBar()->addMenu(tr("&File"));
+    windowMenu = menuBar()->addMenu(tr("&Window"));
     helpMenu = menuBar()->addMenu(tr("&Help"));
+    fileMenu->addAction(exitAction);
+    windowMenu->addAction(minimizeAction);
+    windowMenu->addAction(maximizeAction);
     helpMenu->addAction(aboutAction);
 }
 
@@ -89,7 +101,7 @@ void MainWindow::set_element_buttons_style()
                                      "background-color: %1;"
                                      "border-radius: 3px;"
                                      "padding: 2px;"
-                                     "min-width: 80px;"
+                                     "min-width: 85px;"
                                      "min-height: 50px;"
                                      "border: 1px solid black;"
                                      "color: black;}"
@@ -116,6 +128,12 @@ void MainWindow::set_elements_connections()
             button->installEventFilter(this);
         }
     }
+    // File action
+    connect(exitAction, &QAction::triggered, this, &MainWindow::close);
+
+    // Window actions
+    connect(minimizeAction, &QAction::triggered, this, &MainWindow::minimize_window);
+    connect(maximizeAction, &QAction::triggered, this, &MainWindow::maximize_window);
 
     // About action
     connect(aboutAction, &QAction::triggered, this, &MainWindow::show_about_dialog);
@@ -220,7 +238,15 @@ void MainWindow::display_element_information(const int &elementIndex)
     for (int i = 0; i < properties.size(); ++i)
     {
         QLabel *propertyLabel = new QLabel(properties.at(i));
-        QLabel *valueLabel = new QLabel(values.at(i));
+        QLabel *valueLabel = nullptr;
+        if(properties.at(i) == "Melting Point:" || properties.at(i) == "Boiling Point:")
+        {
+            valueLabel = new QLabel(values.at(i) + QString(" K"));
+        }
+        else
+        {
+            valueLabel = new QLabel(values.at(i));
+        }
         propertyLabel->setStyleSheet(styleSheetProperty);
         valueLabel->setStyleSheet(styleSheetValue);
 
@@ -283,7 +309,15 @@ void MainWindow::display_element_information_by_name(const QString &elementName)
         for (int i = 0; i < properties.size(); ++i)
         {
             QLabel *propertyLabel = new QLabel(properties.at(i));
-            QLabel *valueLabel = new QLabel(values.at(i));
+            QLabel *valueLabel = nullptr;
+            if(properties.at(i) == "Melting Point:" || properties.at(i) == "Boiling Point:")
+            {
+                valueLabel = new QLabel(values.at(i) + QString(" K"));
+            }
+            else
+            {
+                valueLabel = new QLabel(values.at(i));
+            }
             propertyLabel->setStyleSheet(styleSheetProperty);
             valueLabel->setStyleSheet(styleSheetValue);
 
@@ -300,6 +334,16 @@ void MainWindow::display_element_information_by_name(const QString &elementName)
         QMessageBox::critical(nullptr, "Error", "Element not found!");
     }
     searchLineEdit->clear();
+}
+
+void MainWindow::minimize_window()
+{
+    this->showMinimized();
+}
+
+void MainWindow::maximize_window()
+{
+    this->showMaximized();
 }
 
 void MainWindow::show_about_dialog()

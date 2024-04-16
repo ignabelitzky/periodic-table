@@ -57,8 +57,8 @@ void print_elements(QList<Element> elements)
         qDebug() << "Phase: " << element.get_phase();
         qDebug() << "Period: " << element.get_period();
         qDebug() << "Group: " << element.get_group();
-        qDebug() << "Melting point: " << element.get_melting_point();
-        qDebug() << "Boiling point: " << element.get_boiling_point();
+        qDebug() << "Melting point: " << element.get_melting_point() << " K";
+        qDebug() << "Boiling point: " << element.get_boiling_point() << " K";
         qDebug() << "Density: " << element.get_density();
         qDebug() << "Discovered by: " << element.get_discovered_by();
         qDebug() << "Year discovered: " << element.get_year_discovered();
