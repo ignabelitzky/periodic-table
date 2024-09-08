@@ -106,7 +106,9 @@ void MainWindow::set_element_buttons_style()
                                      "border: 1px solid black;"
                                      "color: black;}"
                                      "QPushButton:hover {"
-                                     "background-color: white;}")
+                                     "background-color: white;}"
+                                     "QPushButton:pressed {"
+                                     "background-color: yellow;}")
                                  .arg(elementsType.at(idx).second);
         for (auto button : buttonGroup->buttons())
         {
